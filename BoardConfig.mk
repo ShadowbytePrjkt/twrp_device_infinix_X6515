@@ -131,7 +131,6 @@ BOARD_USES_MTK_HARDWARE := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP Configuration
-TW_THEME := portrait_mdpi
 TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -141,6 +140,7 @@ TW_INCLUDE_LPTOOLS := true
 TW_DEVICE_VERSION := X6515_Rev1
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
+TW_THEME := portrait_mdpi
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
