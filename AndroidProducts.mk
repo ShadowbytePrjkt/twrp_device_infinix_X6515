@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pb_X6515.mk
+    $(LOCAL_DIR)/twrp_X6515.mk
 
 COMMON_LUNCH_CHOICES := \
-    pb_X6515-user \
-    pb_X6515-userdebug \
-    pb_X6515-eng
+    twrp_X6515-user \
+    twrp_X6515-userdebug \
+    twrp_X6515-eng
