@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common TWRP stuff.
+# Inherit some common PBRP stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from Infinix-X6515 device
