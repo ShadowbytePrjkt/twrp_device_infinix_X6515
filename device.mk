@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctrl.mt6761
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+# PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.mt6761 \
     libgptutils \
     libz \
@@ -32,3 +32,10 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Boot Control HAL for recovery (shared/recovery variants)
+# Matches your stock: android.hardware.boot@1.2-service binary
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service \
+    bootctrl.$(TARGET_BOOTLOADER_BOARD_NAME).recovery
