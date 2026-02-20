@@ -86,6 +86,10 @@ BOARD_SUPER_PARTITION_GROUPS := infinix_dynamic_partitions
 BOARD_INFINIX_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_INFINIX_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
+LZMA_RAMDISK_TARGETS := boot,recovery        # LZMA usually better compression than gzip/xz
+# or (if LZMA not available / errors)
+BOARD_RAMDISK_USE_LZ4 := true                # faster, sometimes smaller on MTK
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6761
 
