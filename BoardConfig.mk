@@ -103,8 +103,8 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # Workaround for copying error vendor files to recovery ramdisk
 # TARGET_COPY_OUT_PRODUCT := product
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_SYSTEM_EXT = system_ext
+# TARGET_COPY_OUT_VENDOR := vendor
+# TARGET_COPY_OUT_SYSTEM_EXT = system_ext
 
 # Encryption
 PLATFORM_VERSION := 99.87.36
