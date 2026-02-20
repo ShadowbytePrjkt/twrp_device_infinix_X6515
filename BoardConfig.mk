@@ -90,6 +90,10 @@ LZMA_RAMDISK_TARGETS := boot,recovery        # LZMA usually better compression t
 # or (if LZMA not available / errors)
 BOARD_RAMDISK_USE_LZ4 := true                # faster, sometimes smaller on MTK
 
+TARGET_GLOBAL_CFLAGS += -Oz -ffunction-sections -fdata-sections -Wl,--gc-sections -flto
+TARGET_GLOBAL_CPPFLAGS += -Oz -ffunction-sections -fdata-sections -Wl,--gc-sections -flto
+TARGET_USES_O3 := true                       # if your clang supports it
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6761
 
@@ -157,6 +161,11 @@ TW_EXCLUDE_NANO := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_NTFS_3G := true
+TW_NO_EXFAT := true                          # no exFAT support
+TW_NO_EXFAT_FUSE := true
+TW_EXCLUDE_TZDATA := true                    # no timezone data (big if multi-region)
+TW_OEM_BUILD := true
+TW_NO_SCREEN_BLANK := true                   # sometimes helps slightly
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
