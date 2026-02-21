@@ -90,9 +90,9 @@ LZMA_RAMDISK_TARGETS := boot,recovery        # LZMA usually better compression t
 # or (if LZMA not available / errors)
 BOARD_RAMDISK_USE_LZ4 := true                # faster, sometimes smaller on MTK
 
-TARGET_GLOBAL_CFLAGS += -Oz -ffunction-sections -fdata-sections -Wl,--gc-sections -flto
-TARGET_GLOBAL_CPPFLAGS += -Oz -ffunction-sections -fdata-sections -Wl,--gc-sections -flto
-TARGET_USES_O3 := true                       # if your clang supports it
+# Modern Clang-friendly size optimizations (add these)
+TARGET_CFLAGS_OPTIMIZATIONS := -Oz -ffunction-sections -fdata-sections
+TARGET_LDFLAGS_OPTIMIZATIONS := -Wl,--gc-sections -flto=thin
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6761
